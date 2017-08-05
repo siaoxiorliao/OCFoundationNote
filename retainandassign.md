@@ -20,4 +20,6 @@ if(_dog != dog){
 assign 直接赋值，不做任何内存管理(默认,对基础数据类型(NSInteger)和C数据类型(int,char)等)
 
 ## copy
-copy copy一个索引计数为1的新对象，然后释放旧对象(一般用于NSString *)
+copy copy一个索引计数为1的新对象，然后释放旧对象
+(一般用于NSString *,但是对于明确不可变的,还是应该用strong,因为用copy拷贝一个不可变的是浅拷贝,不会生成新的对象,会有一个)
+
